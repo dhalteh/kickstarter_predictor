@@ -1,0 +1,68 @@
+
+
+
+acquire:
+  num_splits: 10
+
+S3:
+  S3_bucket_name: 'msia423dhalteh'
+  S3_data_name: 'kickstarter_4_16.json'
+
+source_paths:
+  external:
+    compressed_url: https://s3.amazonaws.com/weruns/forfun/Kickstarter/Kickstarter_2020-04-16T03_20_04_541Z.json.gz
+    compressed_path: data/external/kickstarter_4_16.json.gz
+    decompressed_path: data/external/kickstarter_4_16.json
+    uncleaned_path: data/external/uncleaned_kickstarter.csv
+    cleaned_path: data/external/cleaned_kickstarter.csv
+  internal:
+    categories: data/internal/main_categories.txt
+    pcategories: data/internal/parent_categories.txt
+    countries: data/internal/countries.txt
+  model:
+    trained_model: data/models/random_forest.pkl
+    model_metrics: data/models/model_metrics.txt
+    features: data/models/importances.csv
+
+model:
+  numerical: [
+    "USD_goal",
+    "staff_pick",
+    "len_blurb",
+    "len_name",
+    "time_elapsed"
+  ]
+  categorical: [
+  "country",
+  "category_name",
+  "p_category_name"
+  ]
+  staff_picks: [
+  "true",
+  "false"
+  ]
+  response: 'state'
+  test_size: 0.25
+  split_random_state: 123
+  model_dict:
+    criterion: 'entropy'
+    oob_score: True
+    random_state: 123
+
+sqlite:
+  db_path: sqlite:///data/external/kickstarter.db
+
+mysql:
+  port: 3306
+  db_name: "msia423dhalteh_db"
+
+DB_LOCAL_FLAG: True
+
+
+
+
+
+
+
+
+

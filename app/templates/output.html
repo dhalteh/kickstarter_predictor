@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color:#B8B8B8;">
+    <h1 style="color:#008000"> Welcome to the Kickstarter Campaign Predictor App! </h1>
+&nbsp;   <h2> Your campaign's prediction results are below:</h2>
+
+
+    <h2 style="color:#008000;margin-left:40px"> Predicted State of Campaign: {{predicted_state}} </h2>
+    <p></p>
+    <h2 style="color:#008000;margin-left:40px"> Predicted Probability of Success: {{y_pred_proba}} </h2>
+
+
+
+<h3><a href = "{{ url_for('index') }}"> Click here to return to the index to try out another campaign!</a></h3>
+
+
+&nbsp;
+    <h2 style="font-family:Arial;"> About the Kickstarter Campaign Predictor</h2>
+    <p style="font-family:Arial;color:#008000;margin-left:40px"> To all you aspiring Kickstarter campaigners, are you curious as to how your project will perform before starting? </p>
+    <p style="font-family:Arial;color:#008000;margin-left:40px"> This application leverages data from nearly 21,000 past campaigns to help you gauge the likelihood of your project's success!
+        Using a Random Forest that achieves a test Accuracy of 80% and a test AUC of 0.884, this application provides a good estimate of your campaign's probability of success based on
+    a number of important listed above.
+    <p style="font-family:Arial;color:#008000;margin-left:40px"> After inputting your information, please hit "Enter" to generate your prediction. Good luck! </p>
+
+&nbsp;
+
+    <p style="font-family:Arial;color:#008000;margin-left:40px;font-weight: bold"> ©️ Daniel Halteh, dhalteh@gmail.com, June 2020</p>
+
+
+</body>
+</html>

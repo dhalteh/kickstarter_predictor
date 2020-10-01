@@ -1,0 +1,16 @@
+theater
+food
+technology
+music
+publishing
+photography
+games
+fashion
+none
+comics
+dance
+art
+design
+crafts
+journalism
+film & video
