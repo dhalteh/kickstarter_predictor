@@ -2,7 +2,7 @@
 # Kickstarter Predictor Project Repository
 
 ### Project Owner: Daniel Halteh
-### QA: Safia Khouja
+### QA: [Safia Khouja](https://github.com/SafiaKhouja)
 
 - [Project Charter](#project-charter)
 - [Backlog](#backlog)
@@ -30,65 +30,6 @@ The application’s supporting classification model will be trained on a dataset
 This project will employ two metrics of success: 
 - The classification model should meet an CV AUC threshold of 0.9.
 - From a business-value perspective, the success of the application will be measured by comparing the success rate (in terms of attaining funding) of projects that use the application with those that do not. This difference can be shown to be statistically significant through an A/B test, which would be designed after the successful completion of the app frontend and backend.
-
-## Backlog
-
-### Initiative I: Model Development and Selection
-
-**Epic I:** Develop Initial Model—In order to generate immediate business value, the goal is to develop a functional model for potential production use. This initial model can also be used as the baseline for model improvement.
-- **Story 1:** Download, join, and prepare datasets (from werobots.io)<br/> 
-   - Backlog: 1 point 
--	**Story 2:** Data Cleaning
-      -	Address missing values
-      -	Eliminate repeat observations
-      -	Backlog: 2 points 
--	**Story 3:** EDA
-      -	Check for completeness
-      -	Look for necessary variable transformations
-      -	Backlog: 2 points 
--	**Story 4:** Build simple initial model 
-      -	e.g. logistic regression
-      -	Goal is to get baseline for model improvement
-      -	Backlog: 2 points 
-
-**Epic II:** Model Selection and Evaluation—In terms of generating business value, implementing more complex, yet better-performing models can lead to an increase in the Cross-Validation AUC score.
-
--	**Story 1:** Build more complex models 
-      -	Feature selection
-      -	Parameter tuning
-      -	e.g. boosted tree, random forest, xgboost, neural network
-      -	Backlog: 4 points
--	**Story 2:** Explore additional models and methods
-      -	e.g. deep learning, dimensionality reduction
-      -	Icebox
--	**Story 3:** Evaluate models using CV AUC
-      -	Choose optimal model based on highest resulting CV AUC score
-      -	Backlog: 4 points
-
-### Initiative II: Application Development and Cloud Infrastructure
-
-**Epic I:** Develop Application (Frontend)—This front end interface will allow prospective Kickstarter users to use the predictor tool both quickly and efficiently. 
-
--	**Story 1:**  Create application using HTML/CSS and Flask
-      -	Backlog: 8 points
--	**Story 2:** Create data ingestion pipeline to read-in updated Kickstarter data on a periodic basis
-      -	Icebox
--	**Story 3:** Implement classification model into the web application
-      -	Backlog: 8 points
-
-**Epic II:** Cloud Setup and Deployment—Setting the application up with the proper cloud resources helps ensure the stability of the predictor tool and provides a seamless, consistent experience to the users.  
-
--	**Story 1:** Develop necessary cloud environment and resources (i.e. S3 buckets, RDS Instance)
-      -	Backlog: 8 points
--	**Story 2:** Migrate final model and dataset to the cloud, and deploy!
-      -	Backlog: 8 points
--	**Story 3:** Test application using unit and reproducibility checks
-      -	Backlog: 8 points
-
-**Epic III:** Perform an A/B Test—do users of the Kickstarter predictor have a statistically significant higher success rate for their projects compared to the general population?
- -	Icebox
-
-
 
 
 ## Running the Model Pipeline
